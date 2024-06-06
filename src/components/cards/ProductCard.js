@@ -18,10 +18,10 @@ function ProductCard({ p }) {
                     color='green'
                 >
                     <img 
-                    className='card-img-top'
+                        className='card-img-top m-2 p-2'
                         src={`${process.env.REACT_APP_API}/product/photo/${p._id}`} 
                         alt={p.name}
-                        style={{height: "300px", objectFit: "cover"}}
+                        style={{height: "300px", width: "100%", objectFit: "cover"}}
                     />
                 </Badge.Ribbon>
             </Badge.Ribbon>
@@ -36,7 +36,7 @@ function ProductCard({ p }) {
                     })}
                 </h4>
 
-                <p className='card-text'>{p?.description.substring(0, 60)}...</p>
+                <p className='card-text'>{p?.long_desc.substring(0, 60)}...</p>
             </div>
 
             <div className='d-flex justify-content-between'>

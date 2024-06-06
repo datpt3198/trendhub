@@ -14,21 +14,17 @@ function Cart() {
 
     return ( 
     <>
-        <Jumbotron 
-            title={`Hello ${auth?.token && auth?.user?.name}`} 
-            subTitle={cart?.length ? `You have ${cart?.length} items in the cart  ${
-                auth?.token ? "" : "Please login to checkout"
-            }` : "Your cart is empty"} 
-        />
+        <Jumbotron />
 
         <div className='container-fluid'>
             <div className='row'>
                 <div className='col-md-12'>
                     <h4 className='p-3 mt-2 mb-2 bg-light text-center'>
                         {cart?.length ? (
-                            "My cart"
+                            "Your cart"
                             ) : (
                             <div className='text-center'>
+                                <p>There are no products in your cart yet!!!</p>
                                 <button
                                     className='btn btn-primary'
                                     onClick={() => navigate("/")}

@@ -7,11 +7,11 @@ function AdminDashboard() {
 
 
     return ( 
-    <div>
+    <div className="container-fluid">
         <Jumbotron title={`Hello ${auth?.user?.name}`} subtitle="Admin Dashboard" />
 
 
-        <div className="container-fluid">
+        <div className="container">
             <div className="row">
                 <div className="col-md-3">
                     <AdminMenu />

@@ -1,10 +1,30 @@
-.active {
+a {
+  text-decoration: none;
+  color: #333;
+}
+ 
+ .active {
   text-decoration: underline;
   text-decoration-thickness: 2px;
+  background-color: #fff;
+  color: #0258FF;
+}
+
+.text-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.logo a {
+  text-decoration: none;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.border-none {
+  border: none;
 }
 
 .card-button {
@@ -12,9 +32,18 @@
 }
 
 .hoverable:hover {
-  border-right: 5px solid #0d6efd;
-  border-bottom: 5px solid #0d6efd;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
   border-radius: 12px;
+}
+
+.nav--link {
+  color: #fff;
+}
+
+.nav--link:active {
+  background-color: #fff;
+  color:#0258FF;
 }
 
 .form-control {
@@ -31,6 +60,32 @@
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
+}
+
+.footer-logo h1 {
+  font-weight: 700;
+  color: #0258FF;
+  margin: 0 auto;
+}
+
+.footer-items {
+  margin: 12px;
+}
+
+.footer-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+}
+
+.icon-prev,
+.icon-next {
+  border-radius: 30px;
 }
  
 @-webkit-keyframes Gradient {

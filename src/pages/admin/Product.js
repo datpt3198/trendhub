@@ -16,7 +16,9 @@ function AdminProduct() {
     const [categories, setCategories] = useState([]);
     const [photo, setPhoto] = useState("");
     const [name, setName] = useState("");
-    const [description, setDescription] = useState("");
+    const [short, setShort] = useState([]);
+    const [long, setLong] = useState("");
+    
     const [price, setPrice] = useState("");
     const [category, setCategory] = useState("");
     const [shipping, setShipping] = useState("");
@@ -38,11 +40,13 @@ function AdminProduct() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("short", short)
         try {
             const productData = new FormData();
             productData.append("photo", photo);
             productData.append("name", name);
-            productData.append("description", description);
+            productData.append("long_desc", long);
+            productData.append("short_desc", short);
             productData.append("price", price);
             productData.append("category", category);
             productData.append("shipping", shipping);
@@ -63,11 +67,11 @@ function AdminProduct() {
     }
 
     return ( 
-    <div>
+    <div className="conatiner-fluid">
         <Jumbotron title={`Hello ${auth?.user?.name}`} subtitle="Admin Dashboard" />
 
 
-        <div className="container-fluid">
+        <div className="container">
             <div className="row">
                 <div className="col-md-3">
                     <AdminMenu />
@@ -82,7 +86,7 @@ function AdminProduct() {
                                 alt="photo preview"
                                 className="img img-reponsive"
                                 height="200px"
-                            />    
+                            />
                         </div>}
 
                     <div className="pt-2">
@@ -106,22 +110,6 @@ function AdminProduct() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
-                    
-                    <textarea 
-                        type="text"
-                        className="form-control p-2 mb-3"
-                        placeholder="Write a description"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                    />
-
-                    <input 
-                        type="number"
-                        className="form-control p-2 mb-3"
-                        placeholder="Enter price"
-                        value={price}
-                        onChange={(e) => setPrice(e.target.value)}
-                    />
 
                     <Select
                         showSearch
@@ -137,6 +125,59 @@ function AdminProduct() {
                             </Option>
                         ))}
                     </Select>
+
+                    {category ? (
+                        <div>
+                            <input 
+                                type="text"
+                                className="form-control p-2 mb-3"
+                                onChange={e => setShort([...short, (e.target.value)])}
+                            />
+                            <input 
+                                type="text"
+                                className="form-control p-2 mb-3"
+                                onChange={e => setShort([...short, (e.target.value)])}
+                            />
+                            <input 
+                                type="text"
+                                className="form-control p-2 mb-3"
+                                onChange={e => setShort([...short, (e.target.value)])}
+                            />
+                            <input 
+                                type="text"
+                                className="form-control p-2 mb-3"
+                                onChange={e => setShort([...short, (e.target.value)])}
+                            />
+                            <input 
+                                type="text"
+                                className="form-control p-2 mb-3"
+                                onChange={e => setShort([...short, (e.target.value)])}
+                            />
+                            <input 
+                                type="text"
+                                className="form-control p-2 mb-3"
+                                onChange={e => setShort([...short, (e.target.value)])}
+                            />
+                        </div>
+                        ) : ""}
+                    
+                    <textarea 
+                        type="text"
+                        className="form-control p-2 mb-3"
+                        placeholder="Write a description"
+                        value={long}
+                        onChange={(e) => setLong(e.target.value)}
+                    />
+
+                    <input 
+                        type="number"
+                        className="form-control p-2 mb-3"
+                        placeholder="Enter price"
+                        value={price}
+                        onChange={(e) => setPrice(e.target.value)}
+                    />
+
+                    
 
                     <Select
                         bordered={false}

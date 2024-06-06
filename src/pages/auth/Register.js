@@ -11,6 +11,7 @@ function Register() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [phone, setPhone] = useState("");
 
     const [auth, setAuth] = useAuth();
     const navigate = useNavigate();
@@ -57,6 +58,14 @@ function Register() {
                             placeholder='Enter your name' 
                             value={name} 
                             onChange={(e) => setName(e.target.value)}
+                            autoFocus 
+                        />
+                        <input 
+                            type='text' 
+                            className='form-control mb-4 p-2' 
+                            placeholder='Enter your name' 
+                            value={phone} 
+                            onChange={(e) => setPhone(e.target.value)}
                             autoFocus 
                         />
                         <input 

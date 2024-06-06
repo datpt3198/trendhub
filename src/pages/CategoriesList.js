@@ -8,7 +8,7 @@ function CategoriesList() {
 
     return ( 
     <>
-        <Jumbotron title="Categories" subTitle="List of all categories"/>
+        <Jumbotron/>
 
         <div className="container overflow-hidden">
             <div className="row gx-5 gy-5 mt-3 mb-5" >

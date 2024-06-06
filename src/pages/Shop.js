@@ -3,8 +3,8 @@ import axios from "axios";
 import { Checkbox, Radio } from 'antd'
 
 import Jumbotron from "../components/cards/Jumbotron";
-import ProductCard from "../components/cards/ProductCard";
 import {prices} from '../prices'
+import PCardShop from "../components/cards/PCardShop";
 
 function ShopPage() {
     const [categories, setCategories] = useState([]);
@@ -64,18 +64,18 @@ function ShopPage() {
     };
 
     return ( 
-    <>
+    <div className="container-fluid">
         <Jumbotron title="SHOP" subTitle="Welcome to E-comerce" />
 
         <pre>{JSON.stringify(checked, null, 4)}</pre>
 
-        <div className="container-fluid">
-            <div className="row">
+        <div className="container">
+            <div className="row pt-5">
                 <div className="col-md-3">
-                    <h4 className="p-3 mt-2 mb-2 bg-light text-center">
+                    <h4 className="pt-3 mt-2  bg-dark-subtle text-center">
                         Filter by Categories
                     </h4>
-                    <div className="row p-5">
+                    <div className="row pb-3 bg-light  mt-2 mb-2">
                         {categories?.map((c) => (
                             <Checkbox key={c._id} onChange={e => handleCheck(e.target.checked, c._id)} >
                                 {c.name}
@@ -83,10 +83,10 @@ function ShopPage() {
                         ))}
                     </div>
 
-                    <h4 className="p-3 mt-2 mb-2 bg-light text-center">
+                    <h4 className="p-3 mt-2 mb-2 bg-dark-subtle text-center">
                         Filter by Price
                     </h4>
-                    <div className="row p-5">
+                    <div className="row pb-3 bg-light  mt-2 mb-2">
                         <Radio.Group onChange={e => setRadio(e.target.value)}>
                             {prices?.map((price) => (
                                 <div key={price._id} style={{margin: "8px"}}>
@@ -109,20 +109,18 @@ function ShopPage() {
                 </div>
 
                 <div className="col-md-9">
-                    <h4 className="p-3 mt-2 mb-2 bg-light text-center">
-                        {products?.length} Products
-                    </h4>
-                    <div className="row" style={{ height: "80vh", overflow: "scroll" }}>
+                    
+                    <div className="" style={{  overflow: "scroll" }}>
                         {products?.map((p) => (
-                            <div className="col-md-4" key={p._id}>
-                                <ProductCard p={p} />
+                            <div className="" key={p._id}>
+                                <PCardShop p={p} />
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
         </div>
-    </> );
+    </div> );
 }
 
 export default ShopPage;

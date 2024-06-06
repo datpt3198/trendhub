@@ -25,11 +25,11 @@ function Products() {
     }
 
     return ( 
-    <div>
+    <div className="container-fluid">
         <Jumbotron title={`Hello ${auth?.user?.name}`} subtitle="Admin Products" />
 
 
-        <div className="container-fluid">
+        <div className="container">
             <div className="row">
                 <div className="col-md-3">
                     <AdminMenu />
@@ -55,7 +55,7 @@ function Products() {
                                     <div className="col md-8">
                                         <div className="card-body">
                                             <h5 className="card-title">{p?.name}</h5>
-                                            <p className="card-text">{p?.description.substring(0, 160)}...</p>
+                                            <p className="card-text">{p?.long_desc.substring(0, 160)}...</p>
                                             <p className="card-text">{`${p.price} $`}</p>
                                             <p className="card-text">Quantity: {p?.quantity}</p>
                                             <p className="card-text">Sold: {p?.sold}</p>

@@ -7,6 +7,8 @@ import { useAuth } from "../../context/auth";
 import Jumbotron from "../../components/cards/Jumbotron";
 import AdminMenu from "../../components/nav/AdminMenu";
 import PCardHorizon from "../../components/cards/PCardHorizon";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const { Option } = Select;
 
@@ -46,15 +48,19 @@ function AdminOrders() {
         }
     }
 
+    const handleClick = () => {
+
+    }
+
 
     return ( 
-    <div>
+    <div className="container-fluid">
         <Jumbotron 
             title={`Hello ${auth?.user?.name}`} 
             subtitle="Admin Dashboard" 
         />
 
-        <div className="container-fluid">
+        <div className="container">
             <div className="row">
                 <div className="col-md-3">
                     <AdminMenu />
@@ -77,6 +83,7 @@ function AdminOrders() {
                                                 <th scope="col">Ordered</th>
                                                 <th scope="col">Payment</th>
                                                 <th scope="col">Quantity</th>
+                                                <th scope="col"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -99,12 +106,27 @@ function AdminOrders() {
                                                 <td>{moment(o?.createAt).fromNow()}</td>
                                                 <td>{o?.payment?.success ? "Success" : "Failed"}</td>
                                                 <td>{o?.products?.length} products</td>
+                                                <td>
+                                                    <div className="d-inline-flex gap-1">
+                                                        <button 
+                                                            className="btn btn-primary" 
+                                                            type="button" data-bs-toggle="collapse" 
+                                                            data-bs-target="#collapseExample" 
+                                                            aria-expanded="false" 
+                                                            aria-controls="collapseExample"
+                                                        >
+                                                            <FontAwesomeIcon icon={faAngleDown} />
+                                                        </button>
+                                                    </div>    
+                                                </td>
                                             </tr>
+                                            
                                         </tbody>
+                                        
                                     </table>
 
-                                    <div className="container">
-                                        <div className="row m-2">
+                                    <div className="collapse" id="collapseExample">
+                                        <div class="card card-body">
                                             {o?.products?.map((p, index) => 
                                                 <PCardHorizon key={index} c={p} remove={false} />
                                             )}

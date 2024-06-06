@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 import Jumbotron from "../components/cards/Jumbotron";
 import ProductCard from "../components/cards/ProductCard";
@@ -27,12 +29,21 @@ function CategoryView() {
     };
 
     return ( 
-    <>
-        <Jumbotron 
-            title={category?.name} 
-            subTitle={`${products?.length} products found in ${category?.name}`} 
-        />
-        <div className="container-fluid">
+    <div className="container-fluid">
+        <div className="container">
+            <div className="d-flex m-2">
+                <div className='d-flex justify-content-around align-items-center'>
+                    <FontAwesomeIcon icon={faHouse}  className='me-2'/>
+                    <Link className='m-0 text-link' to={'/'} >Home</Link>
+                </div>
+                <span className='m-2'>
+                    {`>`}
+                </span>
+                <p className="my-2">{params.slug}</p>
+            </div>
+        </div>
+        <Jumbotron/>
+        <div className="container">
             <div className="row mt-3">
                 {products?.map(p => (
                     <div key={p._id} className="col-md-4">
@@ -41,7 +52,7 @@ function CategoryView() {
                 ))}
             </div>
         </div>
-    </> );
+    </div> );
 }
 
 export default CategoryView;
