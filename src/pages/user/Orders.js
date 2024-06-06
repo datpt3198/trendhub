@@ -56,6 +56,7 @@ function UserOrders() {
                                                 <th scope="col">Ordered</th>
                                                 <th scope="col">Payment</th>
                                                 <th scope="col">Quantity</th>
+                                                <th scope="col"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -66,6 +67,19 @@ function UserOrders() {
                                                 <td>{moment(o?.createAt).fromNow()}</td>
                                                 <td>{o?.payment?.success ? "Success" : "Failed"}</td>
                                                 <td>{o?.products?.length} products</td>
+                                                <td>
+                                                    <div className="d-inline-flex gap-1">
+                                                        <button 
+                                                            className="btn btn-primary" 
+                                                            type="button" data-bs-toggle="collapse" 
+                                                            data-bs-target="#collapseExample" 
+                                                            aria-expanded="false" 
+                                                            aria-controls="collapseExample"
+                                                        >
+                                                            <FontAwesomeIcon icon={faAngleDown} />
+                                                        </button>
+                                                    </div>    
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
