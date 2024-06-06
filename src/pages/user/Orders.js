@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import { useAuth } from "../../context/auth";
 import Jumbotron from "../../components/cards/Jumbotron";
