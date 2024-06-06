@@ -21,21 +21,23 @@ function PCardShop({ p }) {
     
                 <div className='card-body col-8'>
                     <h5>{p?.name}</h5>
-
-                    <p className='card-text'>{p?.short_desc}</p>
-
-    
                     <h4 className='fw-bold'>
                         {p?.price?.toLocaleString("en-US", {
                             style: 'currency',
                             currency: 'USD',
                         })}
                     </h4>
+
+                    {p?.short_desc.map((sd, i) => {
+                       return <p className='card-text' key={i} >{sd}</p>
+                    })}
     
                     <div className='d-flex justify-content-between my-5 mx-3'>
-                        <Link to={`/product/${p.slug}`}>View Product</Link>
+                        <Link to={`/product/${p.slug}`} className='text-primary'>View Product</Link>
                         
-                        <Link onClick={() => {
+                        <Link 
+                            className='text-primary'
+                            onClick={() => {
                                 setCart([...cart, p]);
                                 localStorage.setItem('cart', JSON.stringify([...cart, p]))
                                 toast.success("Added product in your cart")

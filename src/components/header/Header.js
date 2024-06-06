@@ -49,14 +49,14 @@ function Header() {
                 </div>
                 <div className="sign">
                     {!auth?.user ? (
-                        <div className='d-flex justify-content-around align-items-center'>
+                        <div className='d-flex justify-content-around align-items-center auth-item'>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/login">
+                                <NavLink className="nav-link m-2" to="/login">
                                     LOGIN
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/register">
+                                <NavLink className="nav-link m-2" to="/register">
                                     REGISTER
                                 </NavLink>
                             </li>
