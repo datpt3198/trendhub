@@ -25,14 +25,14 @@ function Search() {
         <form className='d-flex border-2' style={{borderRadius: "10px"}} onSubmit={handlSubmit}>
             <input 
                 type='search'
-                placeholder='Search'
+                placeholder='Mặt hàng bạn đang tìm là...'
                 className='form-control'
                 style={{width: "300px", border: "none", borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px"}}
                 value={values.keyword}
                 onChange={(e) => setValues({ ...values, keyword: e.target.value })}
             />
             <button onClick={() => navigate('/search')} className='btn btn-primary' style={{border: "none", borderTopRightRadius: "10px", borderBottomRightRadius: "10px"}}>
-                Search
+                Tìm kiếm
             </button>
         </form>
      );

@@ -66,20 +66,20 @@ function UserCartSidebar() {
 
     return ( 
         <div className='col-md-4'>
-            <h4>Your cart summary</h4>
-                Total / Address / Payments
+            <h4>Tổng quan giỏ hàng</h4>
+                Tổng tiền / Địa chỉ / Thanh toán
             <hr />
-            <h6>Total: {cartTotal()}</h6>
+            <h6>Tổng tiền: {cartTotal()}</h6>
 
             {auth?.user?.address ? (
                 <>
                     <div className='mb-3'>
                         <hr />
-                        <h4>Address:</h4>
+                        <h4>Địa chỉ:</h4>
                         <h5>{auth?.user?.address}</h5>
                     </div>
                     <button className='btn btn-outline-warning'>
-                                Update address
+                                Cập nhật địa chỉ
                     </button>
                 </>) : (
                 <div className='mb-3'>
@@ -88,7 +88,7 @@ function UserCartSidebar() {
                             className='btn btn-outline-warning'
                             onClick={() => navigate("/dashboard/user/profile")}
                         >
-                            Add delivery address
+                            Thêm địa chỉ giao hàng
                         </button>
                     ) : (
                         <button
@@ -97,7 +97,7 @@ function UserCartSidebar() {
                             state: "/cart",
                             })}
                         >
-                            Login to checkout
+                             Đăng nhập để thanh toán
                         </button>
                     )}
                 </div>
@@ -120,7 +120,7 @@ function UserCartSidebar() {
                             onClick={handleBuy}
                             disabled={!auth?.user?.address || !instance || loading}
                         >
-                            {loading ? "Processing..." : "Buy"}
+                            {loading ? "Đang xử lý..." : "Mua"}
                         </button>
                     </>
                 )}

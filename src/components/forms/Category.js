@@ -27,7 +27,7 @@ function CategoryForm({ value, setValue, photo, setPhoto, handleSubmit,handleDel
                     <button className="btn btn-primary mt-3" onClick={handleSubmit} >{buttonText}</button>
                     {handleDelete && 
                         <button onClick={handleDelete} className="btn btn-danger mt-3" >
-                            Delete
+                            Xóa
                         </button>
                     }
                 </div>

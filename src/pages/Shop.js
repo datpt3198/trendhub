@@ -73,7 +73,7 @@ function ShopPage() {
             <div className="row pt-5">
                 <div className="col-md-3">
                     <h4 className="pt-3 mt-2  bg-dark-subtle text-center">
-                        Filter by Categories
+                        Lọc theo danh mục sản phẩm
                     </h4>
                     <div className="row pb-3 bg-light  mt-2 mb-2">
                         {categories?.map((c) => (
@@ -84,7 +84,7 @@ function ShopPage() {
                     </div>
 
                     <h4 className="p-3 mt-2 mb-2 bg-dark-subtle text-center">
-                        Filter by Price
+                        Lọc theo giá
                     </h4>
                     <div className="row pb-3 bg-light  mt-2 mb-2">
                         <Radio.Group onChange={e => setRadio(e.target.value)}>

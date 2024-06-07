@@ -68,7 +68,7 @@ function Home() {
                         style={{width: "300px", margin: "0 auto", borderRadius: "30px", color: "#fff"}}
                     >
                         <h2 className="p-2 mt-4 mb-4 h4 text-center">
-                            Popular Categories
+                            Danh mục phổ biến
                         </h2>
                     </div>
                     <div className="row">
@@ -86,7 +86,7 @@ function Home() {
                         style={{borderRadius: "30px"}}
                     >
                         <h2 className="p-2 mt-2 mb-4 h4 text-center">
-                            New Arrivals
+                            Sản phẩm mới
                         </h2>
                     </div>
                     <div className="row">
@@ -105,7 +105,7 @@ function Home() {
                                 className={`btn btn-light btn-lg col-3 `}
                                 onClick={() => setLoading(!loading)}
                             >
-                                See all products
+                                Xem tất cả {">>"}
                             </button>
                         ) : <></>}
                     </div>
@@ -117,7 +117,7 @@ function Home() {
                         style={{borderRadius: "30px"}}
                     >
                         <h2 className="p-2 mt-2 mb-4 h4 text-center">
-                            Best Sellers
+                            Bán chạy nhất
                         </h2>
                     </div>
                     <div className="row mt-2">
@@ -140,7 +140,7 @@ function Home() {
                                     setLoading(!loading)
                                 }}
                             >
-                                See all products
+                                Xem tất cả {">>"}
                             </button>
                         ) : <></>}
                     </div>

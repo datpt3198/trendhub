@@ -35,7 +35,7 @@ function Products() {
                     <AdminMenu />
                 </div>
                 <div className="col-md-9">
-                    <div className="p-3 mt-2 mb-2 h4 bg-light">Products</div>
+                    <div className="p-3 mt-2 mb-2 h4 bg-light">Danh sách sản phẩm</div>
 
                     {products?.map((p) => {
                         return (
@@ -57,8 +57,8 @@ function Products() {
                                             <h5 className="card-title">{p?.name}</h5>
                                             <p className="card-text">{p?.long_desc.substring(0, 160)}...</p>
                                             <p className="card-text">{`${p.price} $`}</p>
-                                            <p className="card-text">Quantity: {p?.quantity}</p>
-                                            <p className="card-text">Sold: {p?.sold}</p>
+                                            <p className="card-text">Số lượng: {p?.quantity}</p>
+                                            <p className="card-text">Đã mua: {p?.sold}</p>
                                             <p className="card-text">{p?.category?.name}</p>
                                         </div>
                                     </div>

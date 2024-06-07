@@ -41,7 +41,7 @@ function UserOrders() {
                     <UserMenu />
                 </div>
                 <div className="col-md-9">
-                    <div className="p-3 mt-2 mb-2 h4 bg-light">Orders</div>
+                    <div className="p-3 mt-2 mb-2 h4 bg-light">Đơn hàng của bạn</div>
                     <div className="row">
                         {orders?.map((o, index) => {
                             return (
@@ -53,11 +53,11 @@ function UserOrders() {
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Status</th>
-                                                <th scope="col">Buyer</th>
-                                                <th scope="col">Ordered</th>
-                                                <th scope="col">Payment</th>
-                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Tình trạng</th>
+                                                <th scope="col">Người mua</th>
+                                                <th scope="col">Dặt hàng từ</th>
+                                                <th scope="col">Thanh toán</th>
+                                                <th scope="col">Số lượng</th>
                                                 <th scope="col"></th>
                                             </tr>
                                         </thead>
@@ -68,7 +68,7 @@ function UserOrders() {
                                                 <td>{o?.buyer?.name}</td>
                                                 <td>{moment(o?.createAt).fromNow()}</td>
                                                 <td>{o?.payment?.success ? "Success" : "Failed"}</td>
-                                                <td>{o?.products?.length} products</td>
+                                                <td>{o?.products?.length} sản phẩm</td>
                                                 <td>
                                                     <div className="d-inline-flex gap-1">
                                                         <button 

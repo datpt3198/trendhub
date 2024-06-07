@@ -113,7 +113,7 @@ function ProductUpdate() {
                         <AdminMenu />
                     </div>
                     <div className="col-md-9">
-                        <div className="p-3 mt-2 mb-2 h4 bg-light">Update Product</div>
+                        <div className="p-3 mt-2 mb-2 h4 bg-light">Cập nhật sản phẩm</div>
 
                         {photo ? (
                             <div className="text-center">
@@ -197,8 +197,8 @@ function ProductUpdate() {
                             onChange={(value) => setShipping(value) }
                             value={shipping ? "Yes" : "No"}
                         >
-                            <Option value="0" >No</Option>
-                            <Option value="1" >Yes</Option>
+                            <Option value="0" >Không</Option>
+                            <Option value="1" >Có</Option>
                         </Select>
 
                         <input 
@@ -211,8 +211,8 @@ function ProductUpdate() {
                         />
 
                         <div className="d-flex justify-content-between">
-                            <button onClick={handleSubmit} className="btn btn-primary mb-5" >Update</button>
-                            <button onClick={handleDelete} className="btn btn-danger mb-5" >Delete</button>
+                            <button onClick={handleSubmit} className="btn btn-primary mb-5" >Cập nhật</button>
+                            <button onClick={handleDelete} className="btn btn-danger mb-5" >Xóa</button>
                         </div>
 
                     </div>

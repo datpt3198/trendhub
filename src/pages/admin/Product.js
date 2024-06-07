@@ -77,7 +77,7 @@ function AdminProduct() {
                     <AdminMenu />
                 </div>
                 <div className="col-md-9">
-                    <div className="p-3 mt-2 mb-2 h4 bg-light">Create product</div>
+                    <div className="p-3 mt-2 mb-2 h4 bg-light">Tạo sản phẩm mới</div>
 
                     {photo &&
                         <div className="text-center">
@@ -186,8 +186,8 @@ function AdminProduct() {
                         placeholder="Choose shipping"
                         onChange={(value) => setShipping(value) }
                     >
-                        <Option value="0" >No</Option>
-                        <Option value="1" >Yes</Option>
+                        <Option value="0" >Không</Option>
+                        <Option value="1" >Có</Option>
                     </Select>
 
                     <input 
@@ -199,7 +199,7 @@ function AdminProduct() {
                         onChange={(e) => setQuantity(e.target.value)}
                     />
 
-                    <button onClick={handleSubmit} className="btn btn-primary mb-5" >Submit</button>
+                    <button onClick={handleSubmit} className="btn btn-primary mb-5" >Nộp</button>
                 </div>
             </div>
         </div>

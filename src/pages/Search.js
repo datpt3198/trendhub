@@ -58,7 +58,7 @@ function Search() {
             <div className="row">
                 <div className="col-md-3">
                     <h4 className="p-3 mt-2 mb-2 bg-light text-center">
-                        Filter by Categories
+                        Lọc theo danh mục sản phẩm
                     </h4>
                     <div className="row p-5">
                         {categories?.map((c) => (
@@ -69,7 +69,7 @@ function Search() {
                     </div>
 
                     <h4 className="p-3 mt-2 mb-2 bg-light text-center">
-                        Filter by Price
+                        Lọc theo giá
                     </h4>
                     <div className="row p-5">
                         <Radio.Group onChange={e => setRadio(e.target.value)}>
@@ -88,7 +88,7 @@ function Search() {
                             className="btn btn-outline-secondary col-12"
                             onClick={() => window.location.reload()}
                         >
-                            Reset
+                            Cài lại
                         </button>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ function Search() {
                 <div className="col-md-9">
                     
                     <div className="" style={{  overflow: "scroll" }}>
-                        {values.results.length === 0 ? (<h1>Not found products!!!</h1>)  : values?.results?.map(p => (
+                        {values.results.length === 0 ? (<h1>Không tim thấy sản phẩm nào!</h1>)  : values?.results?.map(p => (
                             <div key={p._id} className="mt-4">
                                 <PCardShop p={p} />
                             </div>

@@ -55,7 +55,7 @@ function Register() {
                         <input 
                             type='text' 
                             className='form-control mb-4 p-2' 
-                            placeholder='Enter your name' 
+                            placeholder='NHập tên của bạn' 
                             value={name} 
                             onChange={(e) => setName(e.target.value)}
                             autoFocus 
@@ -63,7 +63,7 @@ function Register() {
                         <input 
                             type='text' 
                             className='form-control mb-4 p-2' 
-                            placeholder='Enter your name' 
+                            placeholder='Số điện thoại của bạn là' 
                             value={phone} 
                             onChange={(e) => setPhone(e.target.value)}
                             autoFocus 
@@ -71,7 +71,7 @@ function Register() {
                         <input 
                             type='email' 
                             className='form-control mb-4 p-2' 
-                            placeholder='Enter your email' 
+                            placeholder='Nhập email của bạn' 
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)}
                             autoFocus 
@@ -79,14 +79,14 @@ function Register() {
                         <input 
                             type='password' 
                             className='form-control mb-4 p-2' 
-                            placeholder='Enter your password' 
+                            placeholder='Nhập mật khẩu của bạn' 
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)}
                             autoFocus 
                         />
 
                         <button className='btn btn-primary' type='submit'>
-                            Submit
+                            Đăng ký
                         </button>
                     </form>
                 </div>

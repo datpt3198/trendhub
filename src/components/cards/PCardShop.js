@@ -33,7 +33,7 @@ function PCardShop({ p }) {
                     })}
     
                     <div className='d-flex justify-content-between my-5 mx-3'>
-                        <Link to={`/product/${p.slug}`} className='text-primary'>View Product</Link>
+                        <Link to={`/product/${p.slug}`} className='text-primary'>Xem sản phẩm</Link>
                         
                         <Link 
                             className='text-primary'
@@ -41,7 +41,7 @@ function PCardShop({ p }) {
                                 setCart([...cart, p]);
                                 localStorage.setItem('cart', JSON.stringify([...cart, p]))
                                 toast.success("Added product in your cart")
-                            }}>Add to Cart</Link>
+                            }}>Thêm vào giỏ hàng</Link>
                        
                     </div>
                 </div>

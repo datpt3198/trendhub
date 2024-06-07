@@ -51,7 +51,7 @@ function Login() {
                         <input 
                             type='email' 
                             className='form-control mb-4 p-2' 
-                            placeholder='Enter your email' 
+                            placeholder='Nhập email của bạn' 
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)}
                             autoFocus 
@@ -59,13 +59,13 @@ function Login() {
                         <input 
                             type='password' 
                             className='form-control mb-4 p-2' 
-                            placeholder='Enter your password' 
+                            placeholder='Nhập mật khẩu của bạn' 
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)}
                             autoFocus 
                         />
 
-                        <button className='btn btn-primary' type='submit'>Submit</button>
+                        <button className='btn btn-primary' type='submit'>Đăng nhập</button>
                     </form>
                 </div>
             </div>

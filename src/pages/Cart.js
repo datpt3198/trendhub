@@ -24,12 +24,12 @@ function Cart() {
                             "Your cart"
                             ) : (
                             <div className='text-center'>
-                                <p>There are no products in your cart yet!!!</p>
+                                <p>Không có sản phẩm nào hiện tại!</p>
                                 <button
                                     className='btn btn-primary'
                                     onClick={() => navigate("/")}
                                 >
-                                    Continue Shopping
+                                    Đến mua ngay
                                 </button>
                             </div>
                             )}

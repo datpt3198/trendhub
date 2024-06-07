@@ -43,7 +43,7 @@ function Header() {
                         to="/cart"
                         style={{fontSize: "20px", textDecoration: "none", color: "#7A6B6B"}}
                     >
-                        Your Cart
+                        Giỏ hàng
                     </NavLink>
                 </li>
                 </div>
@@ -52,12 +52,12 @@ function Header() {
                         <div className='d-flex justify-content-around align-items-center auth-item'>
                             <li className="nav-item">
                                 <NavLink className="nav-link m-2" to="/login">
-                                    LOGIN
+                                    Đăng nhập
                                 </NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link m-2" to="/register">
-                                    REGISTER
+                                    Đăng ký
                                 </NavLink>
                             </li>
                         </div>
@@ -77,13 +77,13 @@ function Header() {
                                         className='nav-link' 
                                         to={`/dashboard/${auth?.user?.role === 1 ? 'admin' : 'user'}`}
                                     >
-                                        Dashboard
+                                        Bảng điều khiển
                                     </NavLink>
                                 </li>
         
                                 <li className="nav-item pointer">
                                     <button className="nav-link" onClick={handleLogout}>
-                                        LOGOUT
+                                        Đăng xuất
                                     </button>
                                 </li>
                             </ul>

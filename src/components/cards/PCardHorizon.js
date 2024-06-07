@@ -48,7 +48,7 @@ function PCardHorizon({ c, remove = true }) {
                 <div className='d-flex justify-content-end'>
                     <p className='card-text'>
                         <small className='text-muted'>
-                            Listed {moment(c.createdAt).fromNow()}
+                            Thêm vào từ {moment(c.createdAt).fromNow()}
                         </small>
                     </p>
                     {remove && (
@@ -56,7 +56,7 @@ function PCardHorizon({ c, remove = true }) {
                             className='text-danger mb-2 pointer'
                             onClick={() => removeFromCart(c._id)}
                         >
-                            Remove
+                            Xóa
                         </p>
                     )}
                 </div>

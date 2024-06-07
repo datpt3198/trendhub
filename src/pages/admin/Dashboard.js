@@ -8,7 +8,7 @@ function AdminDashboard() {
 
     return ( 
     <div className="container-fluid">
-        <Jumbotron title={`Hello ${auth?.user?.name}`} subtitle="Admin Dashboard" />
+        <Jumbotron />
 
 
         <div className="container">
@@ -17,11 +17,11 @@ function AdminDashboard() {
                     <AdminMenu />
                 </div>
                 <div className="col-md-9">
-                    <div className="p-3 mt-2 mb-2 h4 bg-light">Admin Information</div>
+                    <div className="p-3 mt-2 mb-2 h4 bg-light">Thông tin về quản trị viên</div>
                     <ul className='list-group'>
                         <li className='list-group-item'>{auth?.user?.name}</li>
                         <li className='list-group-item'>{auth?.user?.email}</li>
-                        <li className='list-group-item'>Admin</li>
+                        <li className='list-group-item'>Quản trị viên</li>
                     </ul>
                 </div>
             </div>

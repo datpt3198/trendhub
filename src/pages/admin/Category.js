@@ -103,7 +103,7 @@ function AdminCategory() {
                     <AdminMenu />
                 </div>
                 <div className="col-md-9">
-                    <div className="p-3 mt-2 mb-2 h4 bg-light">Manage Categories</div>
+                    <div className="p-3 mt-2 mb-2 h4 bg-light">Quản lý danh mục sản phẩm</div>
                     
                     <CategoryForm 
                         value={name}

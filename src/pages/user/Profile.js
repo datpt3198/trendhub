@@ -64,7 +64,7 @@ function UserProfile() {
                     <UserMenu />
                 </div>
                 <div className="col-md-9">
-                    <div className="p-3 mt-2 mb-2 h4 bg-light">Profile</div>
+                    <div className="p-3 mt-2 mb-2 h4 bg-light">Hồ sơ người dùng</div>
 
                     <form onSubmit={handleSubmit}>
                         <input 
@@ -97,7 +97,7 @@ function UserProfile() {
                             onChange={e => setAddress(e.target.value)}
                         />
 
-                        <button className="btn btn-primary m-2 p-2">Submit</button>
+                        <button className="btn btn-primary m-2 p-2">Cập nhật</button>
                     </form>
                 </div>
             </div>

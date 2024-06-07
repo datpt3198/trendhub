@@ -55,10 +55,7 @@ function AdminOrders() {
 
     return ( 
     <div className="container-fluid">
-        <Jumbotron 
-            title={`Hello ${auth?.user?.name}`} 
-            subtitle="Admin Dashboard" 
-        />
+        <Jumbotron />
 
         <div className="container">
             <div className="row">
@@ -66,7 +63,7 @@ function AdminOrders() {
                     <AdminMenu />
                 </div>
                 <div className="col-md-9">
-                    <div className="p-3 mt-2 mb-2 h4 bg-light">Orders</div>
+                    <div className="p-3 mt-2 mb-2 h4 bg-light">Đơn hàng</div>
                     <div className="row">
                         {orders?.map((o, index) => {
                             return (
@@ -78,11 +75,11 @@ function AdminOrders() {
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Status</th>
-                                                <th scope="col">Buyer</th>
-                                                <th scope="col">Ordered</th>
-                                                <th scope="col">Payment</th>
-                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Tình trạng</th>
+                                                <th scope="col">Ngươi mua</th>
+                                                <th scope="col">Đặt hàng từ</th>
+                                                <th scope="col">Thanh toán</th>
+                                                <th scope="col">Số lượng</th>
                                                 <th scope="col"></th>
                                             </tr>
                                         </thead>
@@ -105,7 +102,7 @@ function AdminOrders() {
                                                 <td>{o?.buyer?.name}</td>
                                                 <td>{moment(o?.createAt).fromNow()}</td>
                                                 <td>{o?.payment?.success ? "Success" : "Failed"}</td>
-                                                <td>{o?.products?.length} products</td>
+                                                <td>{o?.products?.length} sản phẩm</td>
                                                 <td>
                                                     <div className="d-inline-flex gap-1">
                                                         <button 

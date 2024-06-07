@@ -85,7 +85,7 @@ function ProductDetail() {
                 <div className="d-flex m-2">
                     <div className='d-flex justify-content-around align-items-center'>
                         <FontAwesomeIcon icon={faHouse}  className='me-2'/>
-                        <Link className='m-0 text-link' to={'/'} >Home</Link>
+                        <Link className='m-0 text-link' to={'/'} >Trang chủ</Link>
                     </div>
                     <span className='m-2'>
                         {`>`}
@@ -180,7 +180,7 @@ function ProductDetail() {
                                 toast.success("Added product in your cart")
                             }}
                         >
-                            Add to Cart
+                            Thêm vào giỏ hàng
                         </button>
                     </div>     
                 </div>

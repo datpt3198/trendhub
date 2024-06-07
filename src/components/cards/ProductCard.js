@@ -45,7 +45,7 @@ function ProductCard({ p }) {
                     style={{borderBottomLeftRadius: "5px"}}
                     onClick={() => navigate(`/product/${p.slug}`)}
                 >
-                    View Product
+                    Xem sản phẩm
                 </button>
                 <button 
                     className='btn btn-outline-primary col card-button'
@@ -56,12 +56,9 @@ function ProductCard({ p }) {
                         toast.success("Added product in your cart")
                     }}
                 >
-                    Add to Cart
+                    Thêm vào giỏ hàng
                 </button>
             </div>
-
-            {/* <p>{moment(p.createAt).fromNow()}</p>
-            <p>{p.sold}</p> */}
         </div>
      );
 }
