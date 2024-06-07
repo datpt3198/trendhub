@@ -37,9 +37,9 @@ function PCardHorizon({ c, remove = true }) {
                             {c.name}
                         </h5>
                         <h4>
-                            {c?.price?.toLocaleString("en-US", {
+                            {c?.price?.toLocaleString("vi", {
                                 style: 'currency',
-                                currency: 'USD',
+                                currency: 'VND',
                             })}
                         </h4>
                         <p className='card-text'>{`${c?.long_desc?.substring(0, 120)}...`}</p>

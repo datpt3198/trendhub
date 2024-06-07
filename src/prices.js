@@ -6,27 +6,27 @@ export const prices = [
     },
     {
         _id: 1,
-        name: "$0 to $19",
-        array: [0, 19]
+        name: "Dưới 1 triệu",
+        array: [0, 1000000]
     },
     {
         _id: 2,
-        name: "$20 to $39",
-        array: [20, 39]
+        name: "Dưới 5 triệu",
+        array: [0, 5000000]
     },
     {
         _id: 3,
-        name: "$40 to $59",
-        array: [40, 59]
+        name: "Dưới 10 triệu",
+        array: [0, 10000000]
     },
     {
         _id: 4,
-        name: "$60 to $79",
-        array: [60, 79]
+        name: "Dưới 20 triệu",
+        array: [0, 20000000]
     },
     {
         _id: 5,
-        name: "More than $80",
-        array: [80, 999]
+        name: "Trên 20 triệu",
+        array: [0, 99999999]
     },
 ];

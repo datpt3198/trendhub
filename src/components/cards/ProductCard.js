@@ -30,9 +30,9 @@ function ProductCard({ p }) {
                 <h5>{p?.name}</h5>
 
                 <h4 className='fw-bold'>
-                    {p?.price?.toLocaleString("en-US", {
+                    {p?.price?.toLocaleString("vi", {
                         style: 'currency',
-                        currency: 'USD',
+                        currency: 'VND',
                     })}
                 </h4>
 

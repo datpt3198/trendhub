@@ -22,9 +22,9 @@ function PCardShop({ p }) {
                 <div className='card-body col-8'>
                     <h5>{p?.name}</h5>
                     <h4 className='fw-bold'>
-                        {p?.price?.toLocaleString("en-US", {
+                        {p?.price?.toLocaleString("vi", {
                             style: 'currency',
-                            currency: 'USD',
+                            currency: 'VND',
                         })}
                     </h4>
 
